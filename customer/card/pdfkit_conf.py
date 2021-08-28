@@ -1,4 +1,5 @@
 import os, subprocess, platform
+import pdfkit
 
 if platform.system() == 'Windows':
     pdfkit_config = pdfkit.configuration(wkhtmltopdf=os.environ.get('WKHTMLTOPDF_PATH','C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe'))
