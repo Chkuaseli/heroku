@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from .card.models import db 
 from .config import Config
-from flask_uploads import IMAGES, UploadSet, configure_uploads, patch_request_class
+from flask_uploads import IMAGES, UploadSet, configure_uploads
 from flask_msearch import Search
 
 app = Flask(__name__)
@@ -22,7 +22,7 @@ Migrate(app, db)
 #flask uploads
 photos = UploadSet('photos', IMAGES)
 configure_uploads(app, photos)
-patch_request_class(app)
+
 
 
 from customer.card import route
