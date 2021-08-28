@@ -3,8 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from .card.models import db 
 from .config import Config
-from werkzeug.utils import secure_filename
-from werkzeug.datastructures import  FileStorage
 from flask_uploads import IMAGES, UploadSet, configure_uploads, patch_request_class
 from flask_msearch import Search
 
