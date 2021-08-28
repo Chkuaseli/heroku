@@ -9,7 +9,7 @@ userfeature = db.Table('userfeature',
 )
 
 class User(db.Model):
-  _searchable_=['first_name','last_name','personal_no','card_no']
+  _searchable_=['first_name','last_name','card_no']
   id = db.Column(db.Integer(), primary_key=True,nullable = False)
   first_name = db.Column(db.String(80),unique = False, nullable=False)
   last_name = db.Column(db.String(80),unique = False, nullable=False)
