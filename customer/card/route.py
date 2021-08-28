@@ -3,6 +3,7 @@ from flask import redirect, render_template, url_for, flash, request,current_app
 from .forms import CardInfoForm,DepartmentForm,HumanFeatureform,UpdateInfoForm
 from .models import User,HumanFeature,Department,userfeature
 import secrets,os
+from .pdfkit_config import pdfkit_config
 import pdfkit
 
 
@@ -252,7 +253,7 @@ def result():
 def card(id):
     users = User.query.get(id)
     rendered = render_template('card/card.html',users=users )
-    pdf = pdfkit.from_string(rendered,False)
+    pdf = pdfkit.from_string(rendered,False,configuration=pdfkit_config)
     response = make_response(pdf)
     response.headers['Content-Type']='application/pdf'
     response.headers['Content-Disposition'] = 'atteched;filename = '+users.first_name+secrets.token_hex(10)+'.pdf'
