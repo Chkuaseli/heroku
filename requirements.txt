@@ -29,5 +29,4 @@ validators==0.18.2
 Werkzeug
 WTForms==2.3.3
 WTForms-Components==0.10.5
-uwsgi
 Flask-Reuploaded
