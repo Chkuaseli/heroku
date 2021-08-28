@@ -1,1 +1,1 @@
-web: uwsgi app.app --log-file=-
+web: uwsgi app.app 
