@@ -1,6 +1,4 @@
 import os
-# from flask_uploads import IMAGES, UploadSet, configure_uploads, patch_request_class
-
 basedir = os.path.abspath(os.path.dirname(__file__))
 # image = os.path.join(basedir,'static/images')
 class Config:
