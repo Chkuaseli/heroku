@@ -30,3 +30,4 @@ Werkzeug
 WTForms==2.3.3
 WTForms-Components==0.10.5
 Flask-Reuploaded
+wkhtmltopdf-pack-ng==0.12.3.0
