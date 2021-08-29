@@ -252,12 +252,12 @@ def result():
 @app.route('/card/<int:id>',methods=['GET','POST'])
 def card(id):
     users = User.query.get(id)
-#     rendered = render_template('card/card.html',users=users )
-#     pdf = pdfkit.from_string(rendered,False,configuration=pdfkit_config)
-#     response = make_response(pdf)
-#     response.headers['Content-Type']='application/pdf'
-#     response.headers['Content-Disposition'] = 'atteched;filename = '+users.first_name+secrets.token_hex(10)+'.pdf'
-#     return response
-      return render_template('card/card.html',users=users)
+    # rendered = render_template('card/card.html',users=users )
+    # pdf = pdfkit.from_string(rendered, False, configuration=pdfkit_config)
+    # response = make_response(pdf)
+    # response.headers['Content-Type']='application/pdf'
+    # response.headers['Content-Disposition'] = 'atteched;filename = '+users.first_name+secrets.token_hex(10)+'.pdf'
+    # return response
+    return render_template('card/card.html',users=users)
     
 
