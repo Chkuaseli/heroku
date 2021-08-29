@@ -42,6 +42,7 @@ def add_department():
         db.session.add(add_dep)
         flash(f'the department {department} has bin adedd to your database','success')
         db.session.commit()
+        return redirect(url_for('add_department'))
     return render_template('card/add_department.html',form = form , title = 'add department')
 
 # update department
@@ -86,6 +87,7 @@ def add_humanfeature():
         db.session.add(add_feature)
         flash(f'the human feature {feature} has bin adedd to your database','success')
         db.session.commit()
+        return redirect(url_for('add_humanfeature'))
     return render_template('card/add_humanfeature.html',form = form, title = 'add feature')
 
 # update human feature
