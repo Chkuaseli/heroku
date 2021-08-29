@@ -3,7 +3,7 @@ from flask import redirect, render_template, url_for, flash, request,current_app
 from .forms import CardInfoForm,DepartmentForm,HumanFeatureform,UpdateInfoForm
 from .models import User,HumanFeature,Department,userfeature
 import secrets,os
-from .pdfkit_conf import pdfkit_config
+from .pdfkit_conf import pdfkit_conf
 import pdfkit
 
 
